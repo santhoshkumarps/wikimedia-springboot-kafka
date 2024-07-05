@@ -1,0 +1,14 @@
+#Configure producer
+spring:
+  application:
+    name: "Kafka wikimedia producer"
+  kafka:
+    producer:
+      bootstrap-servers: localhost:9092
+      key-serializer: org.apache.kafka.common.serialization.StringSerializer
+      value-serializer: org.apache.kafka.common.serialization.StringSerializer
+
+default-topic-name: wikimedia_recent_change
+api:
+  wikimedia:
+    url: "https://stream.wikimedia.org/v2/stream/recentchange"
